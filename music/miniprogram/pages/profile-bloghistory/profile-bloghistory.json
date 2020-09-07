@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "find-card":"/components/find-card/find-card",
+    "my-commentShare":"/components/commentShare/commentShare"
+  }
+}

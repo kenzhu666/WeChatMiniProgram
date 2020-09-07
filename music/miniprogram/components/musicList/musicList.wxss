@@ -1,0 +1,41 @@
+.each-container {
+  display: flex;
+  padding: 18rpx 20rpx;
+  align-items: center; 
+}
+
+.each-index {
+  color: #888;
+  font-size: 34rpx;
+  width: 80rpx;
+}
+
+.each-info {
+  flex-grow: 1;
+  width: 0;
+}
+
+.each-name {
+  font-size: 34rpx;
+  color: #333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-bottom: 10rpx;
+}
+
+.each-alia {
+  color: #888;
+}
+
+.each-singer {
+  font-size: 24rpx;
+  color: #888;
+}
+
+.playing .each-index,
+.playing .each-name, 
+.playing .each-alia,
+.playing .each-singer {
+  color: #d43c33;
+}

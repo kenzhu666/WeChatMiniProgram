@@ -1,0 +1,51 @@
+.header-container {
+  height: 320rpx;
+  filter: blur(40rpx);
+  opacity: 0.6;
+}
+
+.header-img {
+  width: 280rpx;
+  height: 280rpx;
+  margin-right: 24rpx;
+  border-radius: 6rpx;
+}
+
+.header-mask {
+  position: absolute;
+  width: 100%;
+  height: 320rpx;
+  background-color: #333;
+  top: 0;
+  left: 0;
+  z-index:-1;
+}
+
+.header-info {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 320rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+.header {
+  flex-grow: 1;
+  line-height: 60rpx;
+  width: 0;
+}
+
+.header-name {
+  font-size: 36rpx;
+  font-weight: 400;
+}
+
+.header view {
+  color: #fff;
+  font-size: 24rpx;
+}
+

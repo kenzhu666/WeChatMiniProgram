@@ -1,0 +1,33 @@
+.container{
+  display:flex;
+  align-items:center;
+}
+
+.control{
+  position: relative;
+  flex:1
+}
+
+.movable-area{
+  position:absolute;
+  width:100%;
+  height:35rpx;
+  bottom:-15rpx;
+  left:0;
+}
+
+.movable-view{
+  width:38rpx;
+  height:38rpx;
+  background:#fefefe;
+  border-radius: 50%;
+}
+
+.time{
+  width:65rpx;
+  padding:0 20rpx;
+  font-size:25rpx;
+  font-weight:400;
+  color:rgba(255,255,255,1);
+  line-height: 30rpx;
+}

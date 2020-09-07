@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/music/music",
+    "pages/musicList/musicList",
+    "pages/player/player",
+    "pages/find/find",
+    "pages/profile/profile",
+    "pages/profile-playhistory/profile-playhistory",
+    "pages/profile-bloghistory/profile-bloghistory",
+    "pages/blogPage/blogPage",
+    "pages/blogComment/blogComment"
+  ],
+  "requiredBackgroundModes": [
+    "audio"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#474747",
+    "navigationBarTitleText": "享听歌",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color":"#474747",
+    "selectedColor":"#13227a",
+    "list": [{
+      "pagePath": "pages/music/music",
+      "text": "音乐",
+      "iconPath": "images/music.png",
+      "selectedIconPath": "images/music-select.png"
+    },
+    {
+      "pagePath": "pages/find/find",
+      "text": "发现",
+      "iconPath": "images/find.png",
+      "selectedIconPath": "images/find-select.png"
+    },
+    {
+      "pagePath": "pages/profile/profile",
+      "text": "我的",
+      "iconPath": "images/profile.png",
+      "selectedIconPath": "images/profile-select.png"
+    }
+  ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

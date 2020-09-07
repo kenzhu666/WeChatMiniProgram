@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "my-search":"/components/search/search",
+    "my-login":"/components/login/login",
+    "find-card":"/components/find-card/find-card",
+    "my-commentShare":"/components/commentShare/commentShare"
+  },
+  "enablePullDownRefresh":true
+}

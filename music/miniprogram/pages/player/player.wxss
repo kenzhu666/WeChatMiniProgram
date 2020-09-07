@@ -1,0 +1,125 @@
+.player-container{
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  filter: blur(40rpx);
+  opacity: 0.5;
+  z-index:-1
+}
+
+.player-mask{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:#222;
+  z-index:-2;
+}
+
+.player-info {
+  text-align: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.img-container{
+  position:absolute;
+  background:url('https://s3.music.126.net/mobile-new/img/disc.png?d3bdd1080a72129346aa0b4b4964b75f=') no-repeat center/contain;
+  width:590rpx;
+  height:590rpx;
+  left:50%;
+  transform:translate(-50%, 140rpx)
+}
+
+/* 圆图上面的指针图片 */
+.img-container::after{
+  content: '';
+  position: absolute;
+  width:190rpx;
+  height:270rpx;
+  top:-150rpx;
+  left:266rpx;
+  background: url('https://s3.music.126.net/m/s/img/needle.png?702cf6d95f29e2e594f53a3caab50e12') no-repeat center/contain;
+  transform: rotate(-15deg);
+  transform-origin: 25rpx 12rpx;
+  transition: transform 0.5s ease;
+}
+
+.down.img-container::after{
+  transform: rotate(0deg);
+}
+
+.img-container image{
+  position: absolute;
+  width:360rpx;
+  height:360rpx;
+  border-radius: 50%;
+  left:50%;
+  top:50%;
+  margin-top:-180rpx;
+  margin-left:-180rpx;
+}
+
+
+
+
+.control {
+  position: absolute;
+  bottom: 8%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+}
+
+.control .iconfont {
+  color: #fefefe;
+}
+
+.icon-diyiyeshouyeshangyishou,
+.icon-zuihouyiyemoyexiayishou{
+  font-size:100rpx;
+}
+
+.icon-bofang,
+.icon-zanting{
+  font-size:120rpx;
+  margin:0 50rpx;
+}
+
+.rotation{
+  /* keyframes的animation，从0度旋转到360度 15秒 */
+  animation: rotation 15s linear infinite;
+  -moz-animation: rotation 15s linear infinite;
+  -webkit-animation: rotation 15s linear infinite;
+  -o-animation: rotation 15s linear infinite;
+}
+
+@keyframes rotation{
+  from{
+    /* 起始样式 */
+    transform:rotate(0deg);
+  }
+  to{
+    /* 结束样式 */
+    transform:rotate(360deg);
+  }
+}
+
+.rotation-pause{
+  animation-play-state:paused;
+}
+
+.progress-bar{
+  width: 90%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 24%;
+}

@@ -1,0 +1,40 @@
+<view class="page">
+  <view class="container">
+    <view class="header">
+
+      <view class="publish-container" bind:tap="onPublish">
+        <i class="iconfont icon-fabu"></i>
+      </view>
+
+      <view class="search-container">
+        <my-search iconfont="iconfont" icon-sousuo="icon-sousuo" bind:search="onSearch" />
+      </view>
+
+    </view>
+
+    <!-- 卡片列表 -->
+    <view class="blog-list">
+      <block wx:for="{{blogList}}" wx:key="_id">
+        <view class="blog-panel">
+          <find-card blog="{{item}}" bindtap="goComment"
+          data-blogid="{{item._id}}">
+          </find-card>
+          <my-commentShare
+          iconfont="iconfont"
+          icon-pinglun="icon-pinglun"
+          icon-plus-share="icon-plus-share"
+          blog="{{item}}"
+          blogId="{{item._id}}"
+          ></my-commentShare>
+        </view>
+      </block>
+    </view>
+
+
+    <!-- 底部弹出层 -->
+    <my-login modalShow="{{modalShow}}"
+    bind:loginSuccess="loginSuccess"
+    bind:loginFail="loginFail">
+    </my-login>
+  </view>
+</view>

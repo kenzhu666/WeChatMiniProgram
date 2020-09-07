@@ -1,0 +1,24 @@
+<view class="player-container" style="background:url({{backgroundImg}})no-repeat center/cover"></view>
+<view class="player-mask"></view>
+
+<view class="player-info">
+  <view class="{{isPlaying ? 'down' : ''}} img-container" bindtap="switchView" hidden="{{showLyric}}">
+    <image src="{{backgroundImg}}" class="rotation {{isPlaying ? '' : 'rotation-pause'}}"></image>
+  </view>
+
+  <my-lyric class="lyric" showLyric="{{!showLyric}}" lyric="{{lyric}}" bindtap="switchView"/>
+
+   <view class="progress-bar">
+    <my-progress-bar bind:songEnd="nextSong" bind:timeUpdate="timeUpdate"
+    bind:onPlay="onPlay" 
+    bind:onPause="onPause" 
+    isSame="{{isSame}}" />
+  </view>
+
+  <view class="control">
+    <text class="iconfont icon-diyiyeshouyeshangyishou" bindtap='prevSong'></text>
+    <text class="iconfont {{isPlaying ? 'icon-zanting' : 'icon-bofang'}}" bindtap="togglePlay"></text>
+    <text class="iconfont icon-zuihouyiyemoyexiayishou" bindtap='nextSong'></text>
+  </view>
+</view>
+

@@ -1,0 +1,10 @@
+<view class="header-container" style="background:url({{listInfo.coverImg}}) no-repeat top/cover"></view>
+<view class="header-mask"></view>
+<view class="header-info">
+  <image class='header-img' src="{{listInfo.coverImg}}"></image>
+  <view class="header">
+    <view class="header-name">{{listInfo.name}}</view>
+  </view>
+</view>
+
+<my-musicList musiclist="{{musiclist}}" />
